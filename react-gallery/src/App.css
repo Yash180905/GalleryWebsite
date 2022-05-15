@@ -1,0 +1,48 @@
+
+form{
+  text-align:center;
+}
+svg{
+  position:absolute;
+  top:1px;
+  left:1px;
+}
+label 
+{
+display: block;
+width: 60px;
+height: 40px;
+margin: 10px auto;
+text-align: center;
+line-height: 30px;  
+font-size: 24px;
+font-weight: 400;
+border: 1px solid var(--primmary);
+border-radius: 60px;
+}
+input{
+  width:0;
+  height: 0;
+}
+span{
+  color:var(--primmary);
+}
+.images{
+  display: flex;
+  height: 50vh;
+  justify-content:space-around;
+  flex-direction:row;
+  align-items: center;
+}
+.img-wrap img{
+  width: 300px;
+  height:300px;
+  opacity: .8;
+  border-radius: 10px;
+
+
+}
+.error
+{
+  color: crimson;
+}
