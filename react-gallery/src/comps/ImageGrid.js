@@ -31,7 +31,16 @@ const ImageGrid = () => {
         return (<div key={data?._id}
           className="img-wrap"
         >
-          <img src={getImageUrl(data?._id)}   />
+          <img src={getImageUrl(data?._id)} alt="" />
+          <button onClick={async () => {
+            const a = document.createElement("a");
+            const res = await fetch(getImageUrl(data?._id));
+            const resBlob = await res.blob();
+            const url = URL.createObjectURL(resBlob)
+            a.href = url;
+            a.download = "image.png";
+            return a.click();
+          }}>Download</button>
         </div>)
       })}
       {values.images.length === 0 && <CircularProgress color="secondary" />}
